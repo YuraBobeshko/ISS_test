@@ -7,10 +7,10 @@ const defaultUrl = "./photos/defaultUrl.jpg";
 function ListAstronaut({ errorListAstronaut, loadData, listAstronaut }) {
   useEffect(() => {
     if (!listAstronaut) {
-      loadData("listAstronaut", "http://api.open-notify.org/astros.json");
+      loadData("listAstronaut", "https://api.open-notify.org/astros.json");
     }
     const timer = setTimeout(() => {
-      loadData("listAstronaut", "http://api.open-notify.org/astros.json");
+      loadData("listAstronaut", "https://api.open-notify.org/astros.json");
     }, 5000);
     return () => clearTimeout(timer);
   }, [listAstronaut, loadData]);
@@ -23,9 +23,20 @@ function ListAstronaut({ errorListAstronaut, loadData, listAstronaut }) {
     [errorListAstronaut, listAstronaut]
   );
 
-  if (errorListAstronaut)
-    return <h1>error name: {errorListAstronaut.toString()}</h1>;
-  if (!memoListAstronaut) return <h1>Loading...</h1>;
+  if (errorListAstronaut){
+    return (
+      <div className={"ListAstronaut"}>
+        <h1>error name: {errorListAstronaut.toString()}</h1>
+      </div>
+    );
+  }
+  if (!memoListAstronaut){
+    return (
+      <div className={"ListAstronaut"}>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className={"ListAstronaut"}>

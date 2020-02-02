@@ -26,9 +26,21 @@ function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
     return () => clearTimeout(timer);
   }, [ISSlocation, loadData]);
 
-  if (errorISSlocation)
-    return <h1>error name: {errorISSlocation.toString()}</h1>;
-  if (!ISSlocation) return <h1>Loading...</h1>;
+  if (errorISSlocation) {
+    return (
+      <div className={"ListAstronaut"}>
+        <h1>error name: {errorISSlocation.toString()}</h1>
+      </div>
+    );
+  }
+  if (!ISSlocation) {
+    return (
+      <div className={"ListAstronaut"}>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   const { latitude, longitude } = ISSlocation.iss_position;
 
   return (
