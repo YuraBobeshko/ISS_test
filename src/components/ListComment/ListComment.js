@@ -25,7 +25,7 @@ function ListComment(props) {
 
   return (
     <div className={"ListComment"}>
-      {data.listComment.reverse().map(comment => (
+      {data.listComment.map(comment => (
         <div className={"ListComment__item"} key={comment.id}>
           <p>{comment.nameAuthor}: </p>
           <p>{comment.title}</p>
