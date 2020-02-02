@@ -32,9 +32,6 @@ function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
         <div className={"ISSlocation__title"}>
           <h1>error name: {errorISSlocation.toString()}</h1>
         </div>
-        <div classNama={'MapISSlocation'}>
-          <h1>error name: {errorISSlocation.toString()}</h1>
-        </div>
       </>
     );
   }
