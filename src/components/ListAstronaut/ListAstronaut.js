@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import PropTypes from "prop-types";
+
 import "./ListAstronaut.scss";
 
 const defaultUrl = "./photos/defaultUrl.jpg";
@@ -7,10 +8,10 @@ const defaultUrl = "./photos/defaultUrl.jpg";
 function ListAstronaut({ errorListAstronaut, loadData, listAstronaut }) {
   useEffect(() => {
     if (!listAstronaut) {
-      loadData("listAstronaut", "https://api.open-notify.org/astros.json");
+      loadData("listAstronaut", "http://api.open-notify.org/astros.json");
     }
     const timer = setTimeout(() => {
-      loadData("listAstronaut", "https://api.open-notify.org/astros.json");
+      loadData("listAstronaut", "http://api.open-notify.org/astros.json");
     }, 5000);
     return () => clearTimeout(timer);
   }, [listAstronaut, loadData]);
