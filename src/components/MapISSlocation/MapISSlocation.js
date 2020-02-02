@@ -28,12 +28,14 @@ function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
 
   if (errorISSlocation) {
     return (
-      <div className={"ISSlocation__title"}>
-        <h1>error name: {errorISSlocation.toString()}</h1>
+      <>
+        <div className={"ISSlocation__title"}>
+          <h1>error name: {errorISSlocation.toString()}</h1>
+        </div>
         <div classNama={'MapISSlocation'}>
           <h1>error name: {errorISSlocation.toString()}</h1>
         </div>
-      </div>
+      </>
     );
   }
   if (!ISSlocation) {
