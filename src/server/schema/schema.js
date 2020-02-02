@@ -12,10 +12,10 @@ const {
 } = graphql;
 
 let listComment = [
-  { id: '1', nameAuthor: "Crime", title: "Pulp Fiction", like: true },
-  { id: '2', nameAuthor: "Sci-Fi", title: "1984", like: false },
-  { id: '3', nameAuthor: "Sci-Fi-Triller", title: "V for vendetta", like: true },
-  { id: '4', nameAuthor: "Crime-Comedy", title: "Snatch", like: false }
+  { id: '1', nameAuthor: "Yura", title: "hi", like: true },
+  { id: '2', nameAuthor: "Li", title: "Cool!!", like: false },
+  { id: '3', nameAuthor: "Irina", title: "booo", like: true },
+  { id: '4', nameAuthor: "Nastya", title: "я тоже туда хочу", like: false }
 ];
 
 const ListCommentType = new GraphQLObjectType({

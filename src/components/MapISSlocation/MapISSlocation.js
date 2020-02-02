@@ -12,7 +12,7 @@ const styles = {
   width: "794px",
   height: "597px",
   border: "2px solid black",
-  borderRadius: "5px"
+  borderRadius: "5px",
 };
 
 function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
@@ -32,14 +32,23 @@ function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
         <div className={"ISSlocation__title"}>
           <h1>error name: {errorISSlocation.toString()}</h1>
         </div>
+        <div className={"ISSlocation__infoText"}>
+          <h1>can't load map(( <br/> error name: {errorISSlocation.toString()}</h1>
+        </div>
       </>
     );
   }
+
   if (!ISSlocation) {
     return (
-      <div className={"ISSlocation__title"}>
-        <h1>Loading...</h1>
-      </div>
+      <>
+        <div className={"ISSlocation__title"}>
+          <h1>Loading...</h1>
+        </div>
+        <div className={"ISSlocation__infoText"} style={styles}>
+          <h1>Loading...</h1>
+        </div>
+      </>
     );
   }
 

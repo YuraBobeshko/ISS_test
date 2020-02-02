@@ -19,13 +19,24 @@ function ListComment(props) {
     return () => clearTimeout(timer);
   }, [refetch, refre]);
 
-  if (error) return <h1>error name: {error.toString()}</h1>;
-
-  if (loading) return <div>Loading...</div>;
-
+  if (error) {
+    return (
+      <div className={"ListComment"}>
+        <h1>error name: {error.toString()}</h1>
+      </div>
+    );
+  }
+  if (loading) {
+    return (
+      <div className={"ListComment"}>
+        <h1>loading...</h1>
+      </div>
+    );
+  }
+  const { listComment } = data;
   return (
     <div className={"ListComment"}>
-      {data.listComment.map(comment => (
+      {listComment.map(comment => (
         <div className={"ListComment__item"} key={comment.id}>
           <p>{comment.nameAuthor}: </p>
           <p>{comment.title}</p>

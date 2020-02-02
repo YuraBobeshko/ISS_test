@@ -7,3 +7,11 @@
 .ISSlocation__title {
   padding: 15px;
 }
+
+.ISSlocation__infoText{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  padding: 100px;
+}

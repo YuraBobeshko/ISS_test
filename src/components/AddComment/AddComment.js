@@ -17,22 +17,24 @@ function AddComment(props) {
     setNameAuthor("");
     setTitle("");
   };
+  
   return (
     <div className={"addComment"}>
       <form className={"addComment__form"}>
-        <label htmlFor={"name"}>name author</label>
+        <label htmlFor={"name"}>Name author</label>
         <input
           id={"name"}
           onChange={event => setNameAuthor(event.target.value)}
           value={nameAuthor}
-          placeholder={"your name"}
+          placeholder={"Your name"}
         />
         <textarea
           onChange={event => setTitle(event.target.value)}
           value={title}
-          placeholder={"your comment"}
+          placeholder={"Your comment"}
         />
         <button
+          disabled={!(nameAuthor && title)}
           onClick={event => {
             event.preventDefault();
             handleSabmite();

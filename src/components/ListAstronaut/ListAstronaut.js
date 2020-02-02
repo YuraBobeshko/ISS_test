@@ -24,14 +24,14 @@ function ListAstronaut({ errorListAstronaut, loadData, listAstronaut }) {
     [errorListAstronaut, listAstronaut]
   );
 
-  if (errorListAstronaut){
+  if (errorListAstronaut) {
     return (
       <div className={"ListAstronaut"}>
         <h1>error name: {errorListAstronaut.toString()}</h1>
       </div>
     );
   }
-  if (!memoListAstronaut){
+  if (!memoListAstronaut) {
     return (
       <div className={"ListAstronaut"}>
         <h1>Loading...</h1>
