@@ -1,0 +1,17 @@
+.addComment {
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  &__form {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 300px;
+    justify-content: space-around;
+
+    * > {
+      padding: 10px;
+    }
+  }
+}

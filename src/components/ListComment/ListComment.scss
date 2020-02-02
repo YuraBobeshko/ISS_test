@@ -1,0 +1,26 @@
+.ListComment {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 15px;
+
+  &__item {
+    padding: 5px;
+    margin: 5px;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  &__like {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-self: flex-end;
+  }
+  &__like.liked {
+    background-color: red;
+  }
+}
