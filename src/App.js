@@ -12,7 +12,7 @@ import AddComment from './components/AddComment/AddComment'
 import './App.scss';
 
 const client = new ApolloClient({
-  uri: '/graphql'
+  uri: process.env.REACT_APP_URL
 });
 
 function App() {
