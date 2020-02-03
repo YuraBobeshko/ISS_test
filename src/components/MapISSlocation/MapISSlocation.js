@@ -9,9 +9,8 @@ const styles = {
   gridColumnEnd: 1,
   gridRowStart: 1,
   gridRowEnd: 1,
-  width: "794px",
+  width: "798px",
   height: "597px",
-  border: "2px solid black",
   borderRadius: "5px",
 };
 
@@ -60,7 +59,7 @@ function MapISSlocation({ errorISSlocation, loadData, ISSlocation, google }) {
         <b>ISS is now located at:</b>
         <p>{`latitude ${latitude}, longitude ${longitude}`}</p>
       </div>
-      <div className={"MapISSlocation"}>
+      <div className={"ISSlocation__map"}>
         <Map
           google={google}
           zoom={10}
